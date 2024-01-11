@@ -41,8 +41,8 @@ jobs:
               id: docker_build
               uses: docker/build-push-action@v4
               with:
-                context : .
-                file: Dockerfile
+                context : ./docker-project
+                file: ./docker-project/Dockerfile
                 push: true
                 tags: ${{ secrets.DOCKER_HUB_USERNAME }}/dockerexample:latest
 
